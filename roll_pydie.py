@@ -14,11 +14,13 @@ import random
 # instructional text for user
 #############################
 
-print '''--------------------------------------------------
+print '''
+--------------------------------------------------
 To receive a random die roll, please choose 
 between 4, 6, 8, 10, 12, and 20-sided die, 
 or enter "quit" to exit the program.
---------------------------------------------------'''
+--------------------------------------------------
+'''
 
 #####################################
 # input and conditionals to determine 
@@ -29,12 +31,16 @@ while True:
     try:
         inp = raw_input('>Enter number of sides: ')
         if inp == 'quit':
-            print '''****************************\n**Thank you for the rolls.**\n****************************'''
+            print '''
+            ****************************
+            **Thank you for the rolls.**
+            ****************************
+            '''
             break
         num_sides = int(inp)
         print '...'
         if num_sides % 2 == 0 and num_sides >= 4 and num_sides <= 20:
-            print """----\nYou have chosen the %s-sided die. \nStandby for the result of your roll.""" % num_sides
+            print """You have chosen the %s-sided die. \nStandby for the result of your roll.""" % num_sides
             print '....'
             if num_sides == 4:
                 result = random.randint(1, 4)
